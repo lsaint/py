@@ -2,9 +2,10 @@ package py
 
 /*
 #include <Python.h>
+#include "gofunction.h"
 
 static inline int codeCheck(PyObject *o) { return PyCode_Check(o); }
-static inline void decref(PyObject *obj) { Py_DECREF(obj); }
+//static inline void decref(PyObject *obj) { Py_DECREF(obj); }
 
 static inline FILE* openFile(char* name) {
 	return fopen(name, "r");
