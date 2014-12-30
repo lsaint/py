@@ -2,7 +2,8 @@ package pyutil
 
 import (
 	"syscall"
-	"github.com/qiniu/py"
+
+	"github.com/lsaint/py"
 	"github.com/qiniu/errors"
 )
 
@@ -112,4 +113,3 @@ func New(mod *py.Base, clsname string, args ...interface{}) (ret *py.Base, err e
 }
 
 // ------------------------------------------------------------------------------------------
-

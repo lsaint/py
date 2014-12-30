@@ -1,25 +1,26 @@
 package pyutil
 
 import (
-	"strings"
 	"reflect"
-	"github.com/qiniu/py"
+	"strings"
+
+	"github.com/lsaint/py"
 )
 
 // ------------------------------------------------------------------------------------------
 
 type Config struct {
-	Cate string
+	Cate        string
 	SliceAsList bool
 }
 
-var DefaultConfig = &Config {
+var DefaultConfig = &Config{
 	Cate: "json",
 }
 
 // ------------------------------------------------------------------------------------------
 
-func tagName(tag string) (string) {
+func tagName(tag string) string {
 	if idx := strings.Index(tag, ","); idx != -1 {
 		return tag[:idx]
 	}

@@ -2,12 +2,13 @@ package pyutil
 
 import (
 	"testing"
-	"github.com/qiniu/py"
+
+	"github.com/lsaint/py"
 )
 
 type Foo struct {
-	A	int		`json:"a"`
-	B	string	`json:"b"`
+	A int    `json:"a"`
+	B string `json:"b"`
 }
 
 func Test(t *testing.T) {
@@ -86,4 +87,3 @@ func checkFoo(val *py.Dict, t *testing.T) bool {
 	}
 	return true
 }
-

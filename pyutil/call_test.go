@@ -2,13 +2,14 @@ package pyutil
 
 import (
 	"testing"
-	"github.com/qiniu/log"
+
+	"github.com/lsaint/py"
 	"github.com/qiniu/errors"
-	"github.com/qiniu/py"
+	"github.com/qiniu/log"
 )
 
 type moduleCase struct {
-	exp string
+	exp            string
 	name, ret, tbl string
 }
 
@@ -58,4 +59,3 @@ func TestCall(t *testing.T) {
 		}
 	}
 }
-
