@@ -24,6 +24,13 @@ func NewString(s string) *String {
 	return newString(ret)
 }
 
+func NewStringWithSize(s string, l int) *String {
+	cs := C.CString(s)
+	defer C.free(unsafe.Pointer(cs))
+	ret := C.PyString_FromStringAndSize(cs, C.Py_ssize_t(l))
+	return newString(ret)
+}
+
 func AsString(o *Base) (v *String, ok bool) {
 	if ok = C.stringCheck(o.c()) != 0; ok {
 		v = newString(o.c())
